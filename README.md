@@ -38,6 +38,14 @@ MLOps implementation using IRIS dataset as a practice dataset.
 1. In another terminal with virtual environment activated, run `mlflow ui`. This will start the MLflow UI server at [localhost:5000](127.0.0.1:5000)
 1. Browse to [localhost:5000](127.0.0.1:5000) and you should see the list of experiments with the parameters, model logged.
 
+## Setup MLflow server
+
+1. Build Docker container from `Dockerfile`: `docker build -t mlflow-server .`
+1. Run Docker container: `docker run -d -p 5001:5000 mlflow-server`
+1. Browse to [localhost:5001](localhost:5001) and you should see the list of experiments with the parameters, model logged.
+
 ## Blog series
 
 1. [MLOps Intro: Build & Deploy RandomForest model with MLflow (Part-1)](https://ainomictech.medium.com/mlops-intro-build-deploy-randomforest-with-mlflow-part-1-49ba5308cf29)
+1. [MLOps Intro: Build & Deploy RandomForest model with MLflow (Part-2)](https://ainomictech.medium.com/mlops-guide-build-deploy-randomforest-with-mlflow-part-2-d6baf0792fb1)
+1. [MLOps Intro: Build & Deploy RandomForest model with MLflow (Part-3)](https://ainomictech.medium.com/mlops-intro-build-deploy-randomforest-with-mlflow-part-3-9c8de20a25a7)
