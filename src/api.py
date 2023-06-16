@@ -7,12 +7,12 @@ import mlflow
 # Set the tracking server to local server
 mlflow.set_tracking_uri('http://localhost:5001')
 
-app = Flask(__name__)
+api = Flask(__name__)
 
 logged_model = 'runs:/238469551abb4712be7f73e7bb21d00e/iris_rf_model'
 
 
-@app.route('/predict', methods=['POST'])
+@api.route('/predict', methods=['POST'])
 def predict():
     data = request.json['data']
 
@@ -26,4 +26,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5002)
+    api.run(host='0.0.0.0', port=5002)
