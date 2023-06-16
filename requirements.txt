@@ -1,2 +1,5 @@
-mlflow
+mlflow==2.4
 scikit-learn
+flask
+streamlit
+plotly
